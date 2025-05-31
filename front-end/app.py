@@ -30,6 +30,7 @@ if submit:
         st.success("✅ Processed successfully!")
         
         st.subheader("🔎 Detected Format & Intent")
+        st.write(f"**Thread Id:** {result.get('thread_id')}")
         st.write(f"**Format:** {result.get('format')}")
         st.write(f"**Intent:** {result.get('intent')}")
 
