@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from memory.redis_memory import RedisMemory
 from fastapi import UploadFile, File
 
 from agents.classifier_agent import classify_input
