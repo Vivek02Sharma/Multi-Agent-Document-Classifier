@@ -15,5 +15,6 @@ def process_json(data):
 
     return {
         "normalized": parsed,
+        "required_fields": required_fields,
         "missing_fields": missing
     }

@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from agents.json_agent import process_json
 from agents.email_agent import process_email
 from agents.pdf_agent import process_pdf
+from memory.memory import store_context
 
 load_dotenv()
 
@@ -24,6 +25,7 @@ def classify_input(file, content):
         result = process_email(content)
     else:
         format_type = "Unknown"
+        result = {}
 
     prompt = f"""You are an AI that classifies the intent of the following document.
             Input:
@@ -57,4 +59,11 @@ def classify_input(file, content):
     else:
         intent = reply.split()[-1]
 
-    return format_type, intent, result
+    thread_id = store_context(
+        source = filename,
+        format_type = format_type,
+        intent = intent or "Unknown",
+        result = result
+    )
+
+    return format_type, intent, result, thread_id
