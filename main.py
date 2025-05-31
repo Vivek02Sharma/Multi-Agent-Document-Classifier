@@ -5,7 +5,6 @@ from fastapi import UploadFile, File
 from agents.classifier_agent import classify_input
 
 app = FastAPI()
-memory = RedisMemory()
 
 @app.post("/process")
 async def process_input(file: UploadFile = File(...)):
