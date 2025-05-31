@@ -1,0 +1,27 @@
+{
+  "id": "INV-2025-00123",
+  "date": "2025-05-30",
+  "due_date": "2025-06-15",
+  "customer": {
+    "name": "Acme Corporation",
+    "address": "123 Business Park, New York, NY",
+    "email": "accounts@acme.com"
+  },
+  "items": [
+    {
+      "description": "Industrial Pump - Model XP200",
+      "quantity": 2,
+      "unit_price": 1500.00
+    },
+    {
+      "description": "Installation Service",
+      "quantity": 1,
+      "unit_price": 300.00
+    }
+  ],
+  "subtotal": 3300.00,
+  "tax": 264.00,
+  "amount": 3564.00,
+  "currency": "USD",
+  "notes": "Payment due within 15 days. Thank you for your business."
+}
