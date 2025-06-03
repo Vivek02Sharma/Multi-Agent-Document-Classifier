@@ -39,7 +39,9 @@ This project is a multi-agent AI system that classifies and processes documents 
 │   ├── new.pdf                 
 │   └── customer.json             
 │
-├── main.py                       
+├── docker-compose.yml
+│
+├── main.py                     
 ├── requirements.txt              
 ├── README.md                  
 ```
@@ -77,3 +79,15 @@ GROQ_API_KEY=your_groq_api_key_here
    ```
    streamlit run front-end/app.py
    ```
+
+   **OR**
+
+- Run docker compose ( make sure to set environment variable )
+   ```
+   docker compose up
+   ```
+- Go to local url
+   ```
+   http://localhost:8501
+   ```
+
