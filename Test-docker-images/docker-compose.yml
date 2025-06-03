@@ -1,0 +1,21 @@
+services:
+  backend:
+    image:   vivek02sharma/multi-agent-backend:v1
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis  
+    env_file:
+      - .env
+
+  frontend:
+    image:   vivek02sharma/multi-agent-frontend:v1
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend  
+
+  redis:
+    image: "redis:latest"  
+    ports:
+      - "6379:6379"  
